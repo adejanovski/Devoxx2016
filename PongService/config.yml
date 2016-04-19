@@ -1,0 +1,19 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8081
+  adminConnectors:
+    - type: http
+      port: 8082
+logging:
+  level: INFO
+metrics:
+  reporters:
+    - type: graphite
+      durationUnit: milliseconds
+      rateUnit: seconds
+      useRegexFilters: false
+      frequency: 10 seconds   
+      host: 192.168.59.103
+      port: 2003
+      prefix: localhost_pong

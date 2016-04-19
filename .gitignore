@@ -1,0 +1,11 @@
+PingService/target/
+PongService/target/
+PongService/.settings/org.eclipse.m2e.core.prefs
+PongService/.settings/
+PongService/.project
+PongService/.classpath
+PongService/dependency-reduced-pom.xml
+PingService/.settings/
+PingService/.project
+PingService/.classpath
+PingService/dependency-reduced-pom.xml

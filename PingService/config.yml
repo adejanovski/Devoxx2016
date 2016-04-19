@@ -1,0 +1,24 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8083
+  adminConnectors:
+    - type: http
+      port: 8084
+logging:
+  level: INFO
+metrics:
+  reporters:
+    - type: graphite
+      durationUnit: milliseconds
+      rateUnit: seconds
+      useRegexFilters: false
+      frequency: 10 seconds   
+      host: 192.168.59.103
+      port: 2003
+      prefix: localhost_ping
+defaultHystrixConfig:
+  hystrix.command.PongCommand.execution.isolation.thread.timeoutInMilliseconds: 2000
+  hystrix.threadpool.PongCommand.maxQueueSize: 10000
+  hystrix.threadpool.PongCommand.queueSizeRejectionThreshold: 10000
+  hystrix.threadpool.PongCommand.coreSize: 50      
